@@ -14,3 +14,4 @@
 docker load -i ss.tar
 docker run -p 80:80 -e "KEY=<自訂的server密碼>" -d daonodess
 ```
+# 使用github actions構建鏡像
