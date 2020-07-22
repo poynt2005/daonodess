@@ -2,7 +2,7 @@ name: buildimage
 on:
     push:
         branches:
-            - master
+            - re
 jobs:
     auto_build:
         name: auto build image
