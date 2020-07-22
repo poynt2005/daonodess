@@ -13,7 +13,7 @@ jobs:
             - name: build image
               run: |
                 echo "Building image..."
-                docker build -t daonodess
+                docker build -t daonodess .
             - name: save image
               run: |
                 echo "Building image..."
