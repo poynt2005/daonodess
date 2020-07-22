@@ -1,0 +1,23 @@
+name: buildimage
+on:
+    push:
+        branches:
+            - master
+jobs:
+    name: auto build image
+    runs-on: ubuntu-latest
+    steps:
+        - name: checkout
+          uses: actions/checkout@master
+        - name: build image
+          run: |
+            echo "Building image..."
+            docker build -t daonodess
+        - name: save image
+          run: |
+            echo "Building image..."
+            docker save daonodess > ss.tar
+        - name: Upload image save
+          uses: actions/upload-artifact@master
+          with:
+            path: ss.tar
