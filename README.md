@@ -9,9 +9,26 @@
 盡可能的縮小容量，保證以最快的時間下載鏡像
 
 # 用法
+
+1.  
 直接在workflow下載tar格式的鏡像，命名為ss.tar
 ```
 docker load -i ss.tar
 docker run -p 80:80 -e "KEY=<自訂的server密碼>" -d daonodess
 ```
+
+2.  
+或上網找那些有提供node.js playground的環境，  
+複製daonodess.min.js後貼上，用法可以參考以下  
+這樣代表建立一個port為80的server，密碼為11111111，並設定加密模式為預設的'aes-256-cfb'  
+```
+(function(){
+    var myServer = new Server(80, '11111111');
+    myServer.createServer();
+    myServer.createSocket();
+})()
+```
+
 # 使用github actions構建鏡像
+
+# 原本的daonodess帳密忘記了，所以先將檔案放在這個repo裡面，以後帳號找回來再把更新的東西傳過去
