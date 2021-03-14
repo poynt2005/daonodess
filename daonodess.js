@@ -264,8 +264,8 @@
                 server: "www.example.com",
                 local_address: "0.0.0.0",
                 scheme: "ws",
-                local_port: port,
-                remote_port: 80,
+                local_port: 1080,
+                remote_port: port,
                 password: key,
                 timeout: timeout || 600,
                 method: method || 'aes-256-cfb'
